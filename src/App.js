@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+import "./App.css";
+
+import Image from "./assets/bg-image.png";
+import IsocialAppPreview from "./pages/IsocialAppPreview";
+import Auth from "./pages/Auth";
+
+
+
+const authToken = false;
+
+const App = () => {
+
+  if(!authToken) return (
+    <div className="app__wrapper">
+      <img className="background-image" src={Image} alt="eclipse" />
+      <Auth />
     </div>
   );
-}
+ 
+  return (
+    <div className="app__wrapper">
+      <img className="background-image" src={Image} alt="eclipse" />
+      <IsocialAppPreview />
+    </div>
+  );
+};
 
 export default App;
