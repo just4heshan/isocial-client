@@ -9,8 +9,13 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(false);
-  const [userName, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [homeTown, setHomeTown] = useState(''); 
+  const [dob, setDob] = useState(''); 
   const [userNameError, setUserNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
@@ -143,6 +148,7 @@ const Auth = () => {
                         fullWidth
                         required
                         error={userNameError}
+                        onError={"hello"}
                       />
                     </div>
                   )}

@@ -9,7 +9,9 @@ import Auth from "./pages/Auth";
 
 
 
-const authToken = false;
+let authToken = false;
+
+// authToken = true;
 
 const App = () => {
 
