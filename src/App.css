@@ -1,6 +1,7 @@
 .background-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%
+    top: -100px;
+    left: 600px;
+    width: 1200px;
+    overflow: hidden;
 };

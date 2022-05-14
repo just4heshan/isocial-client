@@ -5,11 +5,13 @@
    
    .navigate {
        margin: 0;
+       color: rgb(101, 101, 101);
+       
    
    }
    
    .navigateWrapper {
-       background-color: rgba(255, 255, 255, 0.04);
+       background-color: rgba(255, 255, 255, 1);
        width: 100vw;
        height: 10vh;
        display: flex;
@@ -17,18 +19,18 @@
        align-items: center;
        padding: 0px 0;
        margin: 0;
-       color: white;
+    
    
    }
    .logo {
        position: relative;
-       margin-left: 90px;
+       margin-left: 150px;
+       cursor: pointer;
    }
    
    
    .menu {
        position: relative;
-       /* right: 40px; */
    }
    
    .menu ul {
@@ -48,22 +50,27 @@
    
    .menu a {
        text-decoration: none;
-       color: white;
+       color: rgb(101, 101, 101);
        letter-spacing: 2px;
-       opacity: 80%    ;
+       opacity: 80%;
+       padding-bottom: 20px;
+   }
+
+   .menu::before {
+       background-color: blue;
+       width: 10px;
+       height: 3px;
    }
    
    .menu a:hover {
        opacity: 100%;
-       transition: 0.2ms;
-       border-bottom: 0.2px solid white;
+       border-bottom: 5px solid rgb(19, 166, 115);
+       transition: all 400ms ease-in-out;
    }
    
    .toolbar {
-       /* position: relative;
-       right: 100px; */
-       /* margin-right: 90px; */
-       padding-right: 90px;
+       margin-right: 150px;
+       cursor: pointer;
    }
    
    .user-icon {
@@ -71,9 +78,10 @@
    }
    
    .user-icon:hover {
-       color: black;
-       background-color: white;
+       color: white;
+       background-color: rgb(19, 166, 115);
        border-radius: 50%;
+       transition: all 400ms ease-in-out;
    }
    
    @media only screen and (max-width: 750px) {

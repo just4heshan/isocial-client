@@ -3,7 +3,7 @@ import React from "react";
 
 import "./App.css";
 
-import Image from "./assets/bg-image.png";
+import Image from "./assets/bg-intro-desktop.svg";
 import IsocialAppPreview from "./pages/IsocialAppPreview";
 import Auth from "./pages/Auth";
 
@@ -17,7 +17,7 @@ const App = () => {
 
   if(!authToken) return (
     <div className="app__wrapper">
-      <img className="background-image" src={Image} alt="eclipse" />
+      {/* <img className="background-image" src={Image} alt="eclipse" /> */}
       <Auth />
     </div>
   );

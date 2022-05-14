@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./auth.css";
+import Image from "../assets/bg-intro-desktop.svg";
 
 import Navigation from "../components/Navigation";
 import Button from "@mui/material/Button";
@@ -41,6 +42,7 @@ const Auth = () => {
   return (
     <div className="auth__preview">
       <Navigation />
+      <img className="background-image" src={Image} alt="bg-image" />
       <div className="auth__preview-container">
         <div className="auth__preview-Wrapper">
           <div className="auth__preview-left-container">
@@ -163,6 +165,12 @@ const Auth = () => {
                         required
                         error={passwordError}
                       />
+                    </div>
+                  )}
+                  {!isSignUp && (
+                    <div className="login-help">
+                     <a href="#">Forgotton Password?</a>
+                     <a href="#">Create an account</a>
                     </div>
                   )}
 
