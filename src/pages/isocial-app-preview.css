@@ -1,5 +1,5 @@
 .isocial__preview {
-    /* color: white; */
+    color: black;
     position: relative;
     z-index: 2;
     display: flex;
@@ -28,7 +28,7 @@
 }
 
 .isocial__title span {
-    color: white;
+    color: black;
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
 }

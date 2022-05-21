@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import "./App.css";
+import "./index.css";
 
 import Image from "./assets/bg-intro-desktop.svg";
 import IsocialAppPreview from "./pages/IsocialAppPreview";
@@ -9,7 +9,7 @@ import Auth from "./pages/Auth";
 
 
 
-let authToken = false;
+let authToken = true;
 
 // authToken = true;
 
