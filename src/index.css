@@ -1,12 +1,15 @@
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    /* box-sizing: border-box; */
 }
 
-.background-image {
+.backgroundImage {
     position: absolute;
-    top: -100px;
-    left: 600px;
-    width: 1200px;
-    overflow: hidden;
-};
+    display: fixed;
+    top: -90px;
+    right: -500px;
+    height: 100vh;
+    z-index: -1;
+
+}

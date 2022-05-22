@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./auth.css";
 import Image from "../assets/bg-intro-desktop.svg";
-import Navigation from "../components/Navigation";
+import Navigation from "../components/navigateBar/Navigation";
 
 import TextField from "@mui/material/TextField";
 import { Grid, Button, IconButton, Divider } from "@mui/material";

@@ -24,7 +24,7 @@ const App = () => {
  
   return (
     <div className="app__wrapper">
-      <img className="background-image" src={Image} alt="eclipse" />
+      <img className="backgroundImage" src={Image} alt="eclipse" />
       <IsocialAppPreview />
     </div>
   );
