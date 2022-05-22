@@ -34,8 +34,8 @@ const SharePost = () => {
                         <PushPinIcon fontSize="large" className='share-option-icon location-icon-color' />
                         <span className="share-option-text">Location</span>
                     </div>
-                    <button className="share-btn">Share</button>
                 </div>
+                <button className="share-btn">Share</button>
             </div>
         </div>
     </div>
