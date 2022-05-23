@@ -1,0 +1,121 @@
+.share-post {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: -2px 3px 15px -4px #000000; 
+    box-shadow: -2px 3px 15px -4px #000000;
+    margin-top: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.share-post-wrapper {
+    padding: 10px;
+}
+
+.share-post-top {
+    /* box-shadow: ; */
+    display: flex;
+    padding: 10px;
+}
+.share-post-profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.share-input {
+    width: 100%;
+    /* height: 120px */
+    border: none;
+    font-size: 18px;
+}
+
+.share-post-hr {
+    margin: 20px 0 0 0;
+}
+
+.share-post-bottom {
+    padding: 0 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 300ms;
+    padding: 10px 10px;
+}
+
+.share-option-icon {
+    color: #ef476f;
+    margin-right: 4px;
+}
+
+.share-option-text {
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(62, 62, 62);
+}
+
+.share-post-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.publish-btn {
+    border: none;
+    background-color: rgba(143, 18, 18, 0.8);
+    display: block;
+    transition: 800ms;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: -2px 3px 15px -4px #000000; 
+    box-shadow: -2px 3px 15px -4px #000000;
+}
+
+.tag-icon-color {
+    color: #ffd166;
+}
+
+.feeling-icon-color {
+    color: #06d6a0;
+}
+
+.location-icon-color {
+    color: #118ab2;
+}
+
+.publish-btn:hover {
+    background-color: rgb(140, 10, 77, 0.8);
+    transition: 300ms;
+}
+
+.share-option:hover {
+    background-color: rgba(235, 235, 235, 0.8);
+    /* padding: 10px 0px; */
+    transition: 300ms;
+    border-radius: 10px;
+}
+
+
+
+
+
+

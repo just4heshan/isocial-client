@@ -25,7 +25,6 @@
     cursor: pointer;
 }
 
-
 .menu {
     position: relative;
 }
@@ -71,7 +70,10 @@
 }
 
 .user-icon {
+    color: rgb(19, 166, 115);
     padding: 5px 5px ;
+    border-radius: 50%;
+    border: 0.5px solid rgb(16, 133, 92);
 }
 
 .user-icon:hover {

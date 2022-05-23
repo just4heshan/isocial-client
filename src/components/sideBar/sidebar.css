@@ -2,7 +2,7 @@
     background-color: rgb(240, 240, 240);
     width: 18vw;
     height: 90vh;
-    flex: 1.5;
+    flex: 1;
     overflow-y: scroll;
 }
 
