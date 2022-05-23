@@ -7,7 +7,7 @@ import TagIcon from '@mui/icons-material/Tag';
 import MoodIcon from '@mui/icons-material/Mood';
 import PushPinIcon from '@mui/icons-material/PushPin';
 
-const SharePost = () => {
+const CreateCampaign = () => {
   return (
     <div className="share-post">
         <div className="share-post-wrapper">
@@ -42,4 +42,4 @@ const SharePost = () => {
   )
 }
 
-export default SharePost
+export default CreateCampaign

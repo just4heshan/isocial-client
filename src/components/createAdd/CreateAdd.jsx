@@ -9,30 +9,30 @@ import PushPinIcon from '@mui/icons-material/PushPin';
 
 const CreateAdd = () => {
   return (
-    <div className="share-post">
-        <div className="share-post-wrapper">
-            <div className="share-post-top">
-                <img src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Profile Image" className="share-post-profile-image" />
-                <textarea rows={5} cols={5} placeholder='Advertisement description...' type="text" className="share-input" />
+    <div className="add-post">
+        <div className="add-post-wrapper">
+            <div className="add-post-top">
+                <img src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Profile Image" className="add-post-profile-image" />
+                <textarea rows={5} cols={5} placeholder='Advertisement description...' type="text" className="add-input" />
             </div>
-            <hr className="share-post-hr" />
-            <div className="share-post-bottom">
-                <div className="share-options">
-                    <div className="share-option">
-                        <AddAPhotoIcon fontSize="large" className='share-option-icon' />
-                        <span className="share-option-text">Photo</span>
+            <hr className="add-post-hr" />
+            <div className="add-post-bottom">
+                <div className="add-options">
+                    <div className="add-option">
+                        <AddAPhotoIcon fontSize="large" className='add-option-icon' />
+                        <span className="add-option-text">Photo</span>
                     </div>
-                    {/* <div className="share-option">
-                        <TagIcon fontSize="large" className='share-option-icon tag-icon-color' />
-                        <span className="share-option-text">Tag</span>
+                    {/* <div className="add-option">
+                        <TagIcon fontSize="large" className='add-option-icon tag-icon-color' />
+                        <span className="add-option-text">Tag</span>
                     </div>
-                    <div className="share-option">
-                        <MoodIcon fontSize="large" className='share-option-icon feeling-icon-color' />
-                        <span className="share-option-text">Feeling</span>
+                    <div className="add-option">
+                        <MoodIcon fontSize="large" className='add-option-icon feeling-icon-color' />
+                        <span className="add-option-text">Feeling</span>
                     </div> */}
-                    <div className="share-option">
-                        <PushPinIcon fontSize="large" className='share-option-icon location-icon-color' />
-                        <span className="share-option-text">Location</span>
+                    <div className="add-option">
+                        <PushPinIcon fontSize="large" className='add-option-icon location-icon-color' />
+                        <span className="add-option-text">Location</span>
                     </div>
                 </div>
                 <button className="publish-btn">Publish Add</button>

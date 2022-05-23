@@ -1,4 +1,4 @@
-.share-post {
+.add-post {
     background-color: white;
     width: 100%;
     height: 100%;
@@ -9,33 +9,33 @@
     border-bottom-right-radius: 10px;
 }
 
-.share-post-wrapper {
+.add-post-wrapper {
     padding: 10px;
 }
 
-.share-post-top {
+.add-post-top {
     /* box-shadow: ; */
     display: flex;
     padding: 10px;
 }
-.share-post-profile-image {
+.add-post-profile-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-.share-input {
+.add-input {
     width: 100%;
     /* height: 120px */
     border: none;
     font-size: 18px;
 }
 
-.share-post-hr {
+.add-post-hr {
     margin: 20px 0 0 0;
 }
 
-.share-post-bottom {
+.add-post-bottom {
     padding: 0 5px 5px 5px;
     display: flex;
     flex-direction: column;
@@ -43,13 +43,13 @@
     align-items: center;
 }
 
-.share-options {
+.add-options {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.share-option {
+.add-option {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -57,18 +57,18 @@
     padding: 10px 10px;
 }
 
-.share-option-icon {
+.add-option-icon {
     color: #ef476f;
     margin-right: 4px;
 }
 
-.share-option-text {
+.add-option-text {
     font-weight: 400;
     letter-spacing: 1px;
     color: rgb(62, 62, 62);
 }
 
-.share-post-bottom {
+.add-post-bottom {
     display: flex;
     justify-content: center;
 }
@@ -107,7 +107,7 @@
     transition: 300ms;
 }
 
-.share-option:hover {
+.add-option:hover {
     background-color: rgba(235, 235, 235, 0.8);
     /* padding: 10px 0px; */
     transition: 300ms;
