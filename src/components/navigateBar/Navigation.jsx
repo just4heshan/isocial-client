@@ -13,9 +13,9 @@ const Navigation = () => {
             <div className='menu'>
                 <ul>
                     <li><a href="#">Home</a></li>
+                    <li><a href="#">Campaign</a></li>
+                    <li><a href="#">Advertiesment</a></li>
                     <li><a href="#">All Stories</a></li>
-                    <li><a href="#">iBlog</a></li>
-                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div className='toolbar'>
