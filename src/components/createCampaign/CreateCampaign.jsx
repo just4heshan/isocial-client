@@ -1,4 +1,6 @@
-import React from 'react'
+import {React, useState} from 'react'
+
+import axios from "axios";
 
 import "./sharePost.css"
 
@@ -7,7 +9,20 @@ import TagIcon from '@mui/icons-material/Tag';
 import MoodIcon from '@mui/icons-material/Mood';
 import PushPinIcon from '@mui/icons-material/PushPin';
 
-const CreateCampaign = () => {
+const CreateCampaign = (e) => {
+    const [state, setState] = useState({selectedFile: 'none'});
+
+    const imageBrowseHandler = (e) => {
+        e.preventDefault()
+        setState({
+            selectedFile: e.target.files[0]
+        })
+    }
+
+    const imageUploadHandler = (e) => {
+        console.log(state)
+    }
+
   return (
     <div className="share-post">
         <div className="share-post-wrapper">
@@ -19,7 +34,9 @@ const CreateCampaign = () => {
             <div className="share-post-bottom">
                 <div className="share-options">
                     <div className="share-option">
-                        <AddAPhotoIcon fontSize="large" className='share-option-icon' />
+                        <input type="file" 
+                            onChange={imageBrowseHandler}/>
+                        <AddAPhotoIcon fontSize="large" className='share-option-icon' onClick={imageUploadHandler} />
                         <span className="share-option-text">Photo</span>
                     </div>
                     <div className="share-option">

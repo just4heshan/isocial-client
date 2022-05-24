@@ -14,7 +14,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 let authToken = true;
 
 const App = () => {
-
   if (!authToken)
     return (
       <div className="app__wrapper">
@@ -27,13 +26,13 @@ const App = () => {
       <div className="app__wrapper">
         <img className="backgroundImage" src={Image} alt="eclipse" />
         <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/campaign" element={<Campaign />} />
+          <Route path="/advertisement" element={<Advertisement />} />
+          <Route path="/stories" element={<Stories />} />
+        </Routes>
       </div>
-      <Routes>
-        <Route path="/" element={<Home/>} exact />
-        <Route path="/campaign" element={<Campaign/>} />
-        <Route path="/advertisement" element={<Advertisement/>} />
-        <Route path="/stories" element={<Stories/>} />
-      </Routes>
     </BrowserRouter>
   );
 };

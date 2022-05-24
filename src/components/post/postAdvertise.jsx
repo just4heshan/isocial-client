@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-import "./postCampaign.css";
+import "./postAdvertise.css";
 import { Users } from "../../dummyData";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -44,8 +44,8 @@ const PostAdvertise = ({ post }) => {
           </div>
         </div>
         <div className="post-center">
-          <span className="post-desc">{post?.desc}</span>
           <img src={post.photo} alt="Post Image" className="post-image" />
+          <span className="post-desc">{post?.desc}</span>
         </div>
         <div className="post-bottom">
           <div className="post-bottom-left">

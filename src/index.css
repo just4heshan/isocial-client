@@ -8,12 +8,17 @@
     cursor: pointer;
 }
 
+.app__wrapper {
+
+}
+
 .backgroundImage {
     position: absolute;
     display: fixed;
     top: -90px;
     right: -500px;
     height: 100vh;
+    overflow-y: hidden;
     z-index: -1;
 
 }

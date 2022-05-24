@@ -43,7 +43,7 @@ const PostCampaign = ({ post }) => {
             <MoreVertIcon className="vert-icon" />
           </div>
         </div>
-        <div className="post-center">
+        <div className="post-campaign-center">
           <span className="post-desc">{post?.desc}</span>
           <img src={post.photo} alt="Post Image" className="post-image" />
         </div>

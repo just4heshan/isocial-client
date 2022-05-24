@@ -47,25 +47,27 @@
     color: rgb(75, 75, 75);
 }
 
-.post-campaign-center {
+.post-center {
     width: 90%;
     height: auto;
     object-fit: cover;
     padding: 15px;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center;
-    justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .post-desc {
+    flex:1;
     align-self: start;
     font-size: 18px;
     font-weight: 200;
-    margin-top: 30px;
+    padding: 30px;
 }
 
 .post-image {
+    flex:1;
     width: 80%;
     height: auto;
     object-fit: cover;
