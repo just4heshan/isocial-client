@@ -1,24 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import "./auth.css";
 import Image from "../../assets/bg-intro-desktop.svg";
 import Navigation from "../../components/navigateBar/Navigation";
 import customTextField from "./customTextField";
 
-import {
-  TextField,
-  Button,
-  InputAdornment,
-  Divider,
-} from "@mui/material";
+import { TextField, Button, InputAdornment, Divider } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const initialState = {firstName:"", lastName:"", email:"", password:"", confirmPassword:"", phoneNumber:"", homeTown:""}
+const initialState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+  phoneNumber: "",
+  homeTown: "",
+};
 
-const Auth = () => {
+const Auth = ({ setAuthToken }) => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isLogIn, setIsLogIn] = useState(false);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -27,28 +32,33 @@ const Auth = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [homeTown, setHomeTown] = useState("");
-  const [formData, setFormData] = useState(initialState)
+  const [formData, setFormData] = useState(initialState);
 
   const [userNameError, setUserNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
   // const [showPassword, setShowPassword] = useState(true);
+  useEffect((setAuthToken) => {
+    return () => {
+      setAuthToken((prevAuthToken) => !prevAuthToken);
+    };
+  }, [isLogIn]);
 
   const changeHandler = (e) => {
-   setFormData({ ...formData, [e.target.name]: e.target.value})
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const switchHandler = (e) => {
-    e.preventDefault();
-    setIsSignUp(!isSignUp);
+    setIsSignUp((prevIsSignUp) => !prevIsSignUp);
   };
 
   const submitHandler = (e) => {
     e.preventDefault()
+    setIsLogIn((prevIsLogIn) => !prevIsLogIn);
     console.log(formData)
   };
 
-  const errorHandler =(e) => {
+  const errorHandler = (e) => {
     e.preventDefault();
 
     setUserNameError(false);
@@ -65,7 +75,7 @@ const Auth = () => {
     if (email && password) {
       console.log(email, password);
     }
-  }
+  };
 
   const textFieldStyle = {
     paddingBottom: 10,
@@ -97,7 +107,7 @@ const Auth = () => {
                 <p style={{ fontSize: 30, marginBottom: 20 }}>
                   {isSignUp ? "Sign Up" : "Sign In"}
                 </p>
-                <form noValidate autoComplete="off" onSubmit={submitHandler}>
+                <form onSubmit={submitHandler}>
                   {isSignUp && (
                     <>
                       <TextField
@@ -117,7 +127,6 @@ const Auth = () => {
                         type="text"
                         onChange={changeHandler}
                         fullWidth
-                        required
                         style={textFieldStyle}
                       />
                     </>
@@ -139,13 +148,14 @@ const Auth = () => {
                     type="password"
                     onChange={changeHandler}
                     fullWidth
+                    minLength="6"
                     required
                     style={textFieldStyle}
-                    InputProps={
-                      <InputAdornment position="end">
-                        <Visibility onClick={showPasswordHandler} />
-                      </InputAdornment>
-                    }
+                    // InputProps={
+                    //   <InputAdornment position="end">
+                    //     <Visibility onClick={showPasswordHandler} />
+                    //   </InputAdornment>
+                    // }
                   />
                   {isSignUp && (
                     <>
@@ -193,18 +203,18 @@ const Auth = () => {
                       </a>
                     </div>
                   )}
-
                   <Divider />
-
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    type="submit"
-                    style={buttonStyle}
-                    endIcon={<ArrowForwardIosIcon />}
-                  >
-                    {isSignUp ? "Sign Up" : "Sign In"}
-                  </Button>
+                  <Link to={"/campaign"}>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      type="submit"
+                      style={buttonStyle}
+                      endIcon={<ArrowForwardIosIcon />}
+                    >
+                      {isSignUp ? "Sign Up" : "Sign In"}
+                    </Button>
+                  </Link>
                 </form>
               </div>
             </div>
