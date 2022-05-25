@@ -6,8 +6,8 @@
     flex-direction: column;
     /* justify-content: center;
     align-items: center; */
-    width: 100vw;
-    height: 100vh;
+    width: 80vw;
+    height: 90vh;
     /* top: 50%; */
 }
 
@@ -22,3 +22,4 @@
     position: relative;
     display: flex;
 }
+

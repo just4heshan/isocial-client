@@ -47,24 +47,31 @@
     color: rgb(75, 75, 75);
 }
 
-.post-center {
+.post-center-add {
+    display: flex;
     width: 90%;
     height: auto;
-    object-fit: cover;
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-.post-desc {
+.post-desc-add {
     flex:1;
-    align-self: start;
-    font-size: 18px;
-    font-weight: 200;
+    justify-self: center;
     padding: 30px;
 }
+
+.post-desc-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.post-desc-details {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px 0;
+}
+
 
 .post-image {
     flex:1;
@@ -88,8 +95,13 @@
     margin-left: 30px;
 }
 
-.post-like-icon {
-    color: rgb(222, 53, 53);
+.post-like-icon-before {
+    color: rgb(255, 93, 93);
+    padding: 10px;
+    cursor: pointer;
+}
+.post-like-icon-after {
+    color: rgb(20, 195, 142);
     padding: 10px;
     cursor: pointer;
 }
@@ -99,6 +111,6 @@
 }
 
 .post-comment {
-    margin-right: 30px;
+    margin-right: 80px;
 }
 

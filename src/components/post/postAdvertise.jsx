@@ -4,8 +4,8 @@ import "./postAdvertise.css";
 import { Users } from "../../dummyData";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
+import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 
 const PostAdvertise = ({ post }) => {
   const [like, setLike] = useState(post.like);
@@ -43,29 +43,32 @@ const PostAdvertise = ({ post }) => {
             <MoreVertIcon className="vert-icon" />
           </div>
         </div>
-        <div className="post-center">
+        <div className="post-center-add">
           <img src={post.photo} alt="Post Image" className="post-image" />
-          <span className="post-desc">{post?.desc}</span>
+          <div className="post-desc-add">
+          <span className="post-desc-title">{post?.desc}</span>
+          <p className="post-desc-details">Post Details</p>
+          </div>
         </div>
         <div className="post-bottom">
           <div className="post-bottom-left">
             {!isLiked && (
-              <FavoriteBorderIcon
-                className="post-like-icon"
+              <BookmarkAddIcon
+                className="post-like-icon-before"
                 fontSize="large"
                 onClick={handleLike}
               />
             )}
             {isLiked && (
-              <FavoriteIcon
-                className="post-like-icon"
+              <BookmarkAddedIcon
+                className="post-like-icon-after"
                 fontSize="large"
                 onClick={handleLike}
               />
             )}
 
             <span className="post-like">
-              <span>{like}</span> {like === 0 || 1 ? "Likes" : "Like"}
+              <span>{like}</span> {like === 0 || 1 ? "People saved" : ""}
             </span>
           </div>
           <div className="post-bottom-right">

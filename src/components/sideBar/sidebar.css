@@ -3,7 +3,9 @@
     width: 18vw;
     height: 90vh;
     flex: 1;
-    overflow-y: scroll;
+    overflow-y: scroll;;
+    position: fixed;
+    top: 10vh;
 }
 
 /* ::-webkit-scrollbar {

@@ -6,6 +6,8 @@
 .navigate {
     margin: 0;
     color: rgb(101, 101, 101);
+    position: fixed;
+    z-index: 10;
  }
 
 .navigateWrapper {
@@ -23,6 +25,7 @@
     position: relative;
     margin-left: 150px;
     cursor: pointer;
+
 }
 
 .menu {
@@ -44,21 +47,28 @@
     
 }
 
-.menu a {
+.menu-list-link {
     text-decoration: none;
-    color: rgb(101, 101, 101);
+    color: rgb(51, 51, 51);
     letter-spacing: 2px;
     opacity: 80%;
-    padding-bottom: 20px;
+    padding-bottom: 26px;
 }
 
-.menu::before {
+/* .menu li::before {
+    background-color: rgb(18, 66, 50);
+    height: 2px;
+    width: 10px;
+
+} */
+
+/* .menu-list:before {
     background-color: blue;
     width: 10px;
     height: 3px;
-}
+} */
 
-.menu a:hover {
+.menu-list :hover {
     opacity: 100%;
     border-bottom: 5px solid rgb(19, 166, 115);
     transition: all 400ms ease-in-out;

@@ -25,22 +25,33 @@
     border-radius: 50%;
 }
 
+.add-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .add-input-title {
     width: 100%;
     /* height: 120px */
     font-size: 18px;
-    padding: 10px 0 10px 0;
+    padding: 20px 0 20px 0;
     border: 0.2px solid rgb(130, 130, 130, 0.5);
 }
 
 
 .add-input-desc {
     width: 100%;
+    padding-top: 20px ;
     /* height: 120px */
     border: 0.2px solid rgb(130, 130, 130, 0.5);
     font-size: 18px;
     margin-top: 10px;
 }
+
+/* .add-form-category-list::placeholder {
+    padding-left: 30px;
+} */
 
 .add-post-hr {
     margin: 20px 0 0 0;
@@ -87,7 +98,6 @@
 .publish-btn {
     border: none;
     background-color: rgba(143, 18, 18, 0.8);
-    display: block;
     transition: 800ms;
     color: white;
     cursor: pointer;
@@ -95,7 +105,7 @@
     letter-spacing: 2px;
     font-weight: 550;
     border-radius: 20px;
-    align-items: center;
+    margin: 0 280px 20px 280px;
     text-align: center;
     -webkit-box-shadow: -2px 3px 15px -4px #000000; 
     box-shadow: -2px 3px 15px -4px #000000;
@@ -123,6 +133,13 @@
     /* padding: 10px 0px; */
     transition: 300ms;
     border-radius: 10px;
+}
+
+.isocial-bannner {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 30px 0;
+    color: rgb(165, 164, 164);
 }
 
 

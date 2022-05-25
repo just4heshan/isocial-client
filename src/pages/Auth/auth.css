@@ -1,9 +1,10 @@
 .auth__preview {
     position: relative; 
+    top: 10vh;
     color: rgb(27, 27, 27);
     background-color: rgb(239, 239, 239);
     width: 100%;
-    height: 100vh ;
+    height: 90vh ;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -78,24 +79,26 @@
     padding: 50px 60px;
 }
 
-.auth__preview-container_fields-content {
+/* .auth__preview-container_fields-content {
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .auth__preview-container_fields-content_input {
     margin-top: 20px;
     margin-bottom: 20px;
     display: block;
-}
+} */
 
 .login-help a{
     text-decoration: none;
     display: block;
-    color: rgb(57, 59, 69);
+    color: rgb(55, 82, 216);
     font-size: 14px;
     font-weight: 400;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
+
 
 @media only screen and (max-width: 900px) {
     .auth__preview-left-container {
