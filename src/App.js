@@ -28,14 +28,16 @@ const App = () => {
   const [authToken, setAuthToken] = useState(true)
   return (
     <BrowserRouter>
-      {!authToken && (
-        <div className="app__wrapper">
+      <div>
+        <div >
+        {!authToken && (
+        <div>
           <Navigation setAuthToken={setAuthToken}/>
           <Auth setAuthToken={setAuthToken}/>
         </div>
       )}
       {authToken && (
-        <div className="app__wrapper">
+        <div >
           <img className="backgroundImage" src={Image} alt="eclipse" />
           <Navigation setAuthToken={setAuthToken} />
           <Routes>
@@ -47,6 +49,8 @@ const App = () => {
           </Routes>
         </div>
       )}
+        </div>
+      </div>
     </BrowserRouter>
   );
 };

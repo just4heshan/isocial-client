@@ -43,6 +43,7 @@ const PostCampaign = ({ post }) => {
             <MoreVertIcon className="vert-icon" />
           </div>
         </div>
+        {/* <hr className="hr-line"/> */}
         <div className="post-campaign-center">
           <span className="post-desc">{post?.desc}</span>
           <img src={post.photo} alt="Post Image" className="post-image" />
@@ -65,7 +66,7 @@ const PostCampaign = ({ post }) => {
             )}
 
             <span className="post-like">
-              <span>{like}</span> {like === 0 || 1 ? "Likes" : "Like"}
+              <span style={{fontWeight: 200, fontSize: 20}}>{like}</span> {like === 0 || 1 ? "LIKES" : "LIKE"}
             </span>
           </div>
           <div className="post-bottom-right">

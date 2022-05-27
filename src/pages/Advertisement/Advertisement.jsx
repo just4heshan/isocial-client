@@ -7,11 +7,10 @@ import "../Campaign/campaign.css";
 
 const Advertisement = () => {
   return (
-    <div className="isocial__preview">
+    <div className="campaign__preview">
       <div className="home-container">
-        <AdvertisementSidebar />
-        <AdvertisementFeed />
-        {/* <Rightbar /> */}
+        <div className="container-left"><AdvertisementSidebar /></div>
+        <div className="container-right"> <AdvertisementFeed /></div>
       </div>
     </div>
   );

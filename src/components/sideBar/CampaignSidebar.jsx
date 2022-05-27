@@ -1,10 +1,13 @@
 import React from 'react'
 
-import "./sidebar.css";
+import "./campaignSideBar.css";
 
 import FeedIcon from '@mui/icons-material/Feed';
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+
+import { Users } from '../../dummyData';
+import FollowersList from './follwersList/FollowersList';
 
 const CampaignSidebar = () => {
   return (
@@ -30,71 +33,9 @@ const CampaignSidebar = () => {
             <hr className='sidebar-hr'/>
             <span className="friend-list-heading">Followers</span>
             <ul className="sidebar-friend-list">
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-                <li className="sidebar-friend-item">
-                    <img className="friend-image" src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046?k=20&m=1209654046&s=612x612&w=0&h=Atw7VdjWG8KgyST8AXXJdmBkzn0lvgqyWod9vTb2XoE=" alt="Person Image" className="friend-image" />
-                    <span className="friend-name">User Name</span>
-                </li>
-
+            {Users.map((user) => (
+            <FollowersList key={user.id} user={user} />
+                ))}
             </ul>
         </div>
     </div>

@@ -1,0 +1,102 @@
+.sidebar {
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    width: 100%;
+    /* min-width: 20vw; */
+    height: 90vh;
+    overflow-y: scroll;;
+    position: relative; 
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ::-webkit-scrollbar {
+    width: 5px;
+} */
+
+.sidebar-wrapper {
+    padding: 20px 15px;
+}
+
+.sidebar-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar-item {
+    padding-bottom: 20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.sidebar-icon {
+   margin-right: 15px;
+   color: rgb(25, 22, 70);
+}
+
+.sidebar-item-text {
+    color: rgb(48, 46, 86);
+    letter-spacing: 1px;
+}
+
+.sidebar-btn {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 200;
+    justify-self: center;
+    letter-spacing: 1px;
+}
+
+.friend-list-heading {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.sidebar-friend-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-friend-item {
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.friend-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px
+}
+
+.friend-name {
+    font-weight: 200;
+    letter-spacing: 1px;
+    overflow-y: hidden;
+}
+
+.sidebar-hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-icon:hover {
+    color: rgb(16, 133, 92);
+}
+
+.sidebar-item-text:hover {
+    color: rgb(16, 133, 92);
+}

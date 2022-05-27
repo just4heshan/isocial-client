@@ -1,17 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import Select from "react-select";
+import FileBase from 'react-file-base64';
 
 import "./createAdd.css";
-// import Logo from "../../assets/logo.svg"
 
 import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
 import PushPinIcon from "@mui/icons-material/PushPin";
 
 const CreateAdd = () => {
+  const [postData, setPostData] = useState({title: '', message: '', category: '', selectedFile:'' });
+
   const options = [
     { value: "Personal;", label: "Personal" },
     { value: "Business", label: "Business" },
   ];
+
+  const submitHandler = (e) => {
+    e.preventDefault()
+    // setPostData()
+    console.log(postData)
+  }
+
   return (
     <div className="add-post">
       <div className="add-post-wrapper">
@@ -22,13 +31,15 @@ const CreateAdd = () => {
             className="add-post-profile-image"
           />
         </div>
-        <form action="#" className="add-form">
+        <form action="#" className="add-form" onSubmit={submitHandler}>
         <input
           rows={5}
           cols={5}
           placeholder="  Write an advertisement title..."
           type="text"
           className="add-input-title"
+          value={postData.title} 
+                    onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
         <textarea
           rows={5}
@@ -36,14 +47,20 @@ const CreateAdd = () => {
           placeholder="  Advertisement description..."
           type="text"
           className="add-input-desc"
+          value={postData.message} 
+                    onChange={(e) => setPostData({ ...postData, message: e.target.value })}
         />
         <Select
+          className="select-opt"
           options={options}
           placeholder="Choose the advertiesment type"
-          className="add-form-category-list"
+          value={postData.category} 
+                    onChange={(e) => setPostData({ ...postData, category: e.target.value })}
         />
+        <hr className="add-post-hr"/>
         <div className="add-options">
             <div className="add-option">
+              <div className="input-image"><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>    
               <AddAPhotoIcon fontSize="large" className="add-option-icon" />
               <span className="add-option-text">Photo</span>
             </div>
@@ -54,8 +71,8 @@ const CreateAdd = () => {
               />
               <span className="add-option-text">Location</span>
             </div>
-          </div>
-          <button className="publish-btn">Publish Add</button>
+        </div>
+          <button className="publish-btn">Publish</button>
         </form>
         <hr className="add-post-hr" />
         <div className="isocial-bannner">
