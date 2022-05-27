@@ -1,14 +1,19 @@
 * {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    /* overflow-x: hidden; */
+    font-family: 'Poppins', sans-serif;
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 body {
     background-color: rgb(247, 247, 247);
-    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    /* overflow-x: hidden; */
+}
+
+html {
+    width: 100%;
+    height: 100vh;
 }
 
 * li > {
@@ -21,11 +26,11 @@ body {
 
 .backgroundImage {
     position: absolute;
+    overflow: hidden;
     display: fixed;
     top: -90px;
     right: -500px;
     height: 100vh;
-    /* overflow: hidden; */
     z-index: -1;
 
 }

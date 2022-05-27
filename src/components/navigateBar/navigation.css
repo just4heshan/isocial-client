@@ -17,14 +17,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 0;
+    padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .logo {
     position: relative;
     margin-left: 150px;
     cursor: pointer;
+
 
 }
 
@@ -77,6 +79,9 @@
 .toolbar {
     margin-right: 150px;
     cursor: pointer;
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
 .user-icon {
@@ -93,31 +98,49 @@
     transition: all 400ms ease-in-out;
 }
 
+.span-bar {
+    display: block;
+    margin: 0 0 5px 0;
+    width: 22px;
+    height: 3px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(16, 133, 92);
+    transition: all 250ms ease-in-out;
+    transform-origin: 4px 1px; 
+    display: none;
+}
+
 @media only screen and (max-width: 750px) {
-    /* .navigateWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 0;
-        height: 10vh;
-    } */
-
     .logo {
-        margin: 10px auto;
+        margin: 10px auto 0 auto;
         padding: 0;
     }
-
-    .menu {
-        margin: 10px auto;
-        padding: 0;
-    }
-
 
     .toolbar {
-        margin: 10px auto;
+        margin: 0 auto;
         padding: 0;
+    }
+
+    .navigateWrapper {
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
-   
+
+@media only screen and (max-width: 1075px) {
+    .menu {
+        display: none;
+    }
+
+    .span-bar {
+        display: block;
+    }
+
+
+
+    
+}

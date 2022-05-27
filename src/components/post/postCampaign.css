@@ -1,28 +1,41 @@
 .post {
-    /* margin: 10px auto; */
-    padding: 0;
-    width: 100%;
+    width: 80%;
     height: auto;
     background-color: white;
     -webkit-box-shadow: -2px 3px 15px -4px #000000; 
     box-shadow: -2px 3px 15px -4px #000000;
-    margin: 20px 0;
     border-radius: 10px;
+    position: relative;
+    margin: 15px 0;
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 .post-wrapper {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .post-top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* width: 100%; */
 }
 
 .post-top-left {
     display: flex;
-    justify-content: space-around;
+    flex: 1;
+    align-items: center;
+}
+
+.post-top-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -36,10 +49,12 @@
 .post-user-name {
     margin-left: 10px;
     padding-right: 20px;
+    opacity: 90%;
 }
 
 .post-date {
     color: grey;
+    font-size: 14px;
 }
 
 .vert-icon {
@@ -52,21 +67,22 @@
     height: auto;
     object-fit: cover;
     padding: 15px;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center;
-    justify-content: center; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .post-desc {
-    align-self: start;
+    /* align-self: start; */
     font-size: 18px;
     font-weight: 200;
     margin-top: 30px;
 }
 
 .post-image {
-    width: 80%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     margin: 15px 0;
@@ -74,6 +90,7 @@
 }
 
 .post-bottom {
+    width: 100%;
     display: flex;
     padding: 0;
     align-items: center;
@@ -83,6 +100,7 @@
 .post-bottom-left {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     margin-left: 30px;
 }
 
@@ -98,5 +116,12 @@
 
 .post-comment {
     margin-right: 30px;
+}
+
+.hr-line {
+    width: 50%;
+    margin-top: 5px;
+    color: #000000;
+    opacity: 0.5;
 }
 

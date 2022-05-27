@@ -1,25 +1,43 @@
-.isocial__preview {
+.campaign__preview {
     color: black;
+    display: flex;
     position: relative;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-    width: 80vw;
     height: 90vh;
-    /* top: 50%; */
-}
-
-.navi-toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    width: 100vw;
+    top: 10vh;
 }
 
 .home-container {
     position: relative;
     display: flex;
+    width: 100%;
+
 }
+.container-left {
+  width: 20%;
+  position: fixed;
+  z-index: 2;
+
+}
+
+.container-right {
+    width: 80%;
+    position: absolute;
+    left: 30vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .container-left {
+        display: none;
+    }
+
+    .container-right {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
 

@@ -1,7 +1,7 @@
-.post {
+.add {
     /* margin: 10px auto; */
     padding: 0;
-    width: 100%;
+    width: 80%;
     height: auto;
     background-color: white;
     -webkit-box-shadow: -2px 3px 15px -4px #000000; 
@@ -10,35 +10,35 @@
     border-radius: 10px;
 }
 
-.post-wrapper {
+.add-wrapper {
     padding: 15px;
 }
 
-.post-top {
+.add-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.post-top-left {
+.add-top-left {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.post-profile-image {
+.add-profile-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.post-user-name {
+.add-user-name {
     margin-left: 10px;
     padding-right: 20px;
 }
 
-.post-date {
+.add-date {
     color: grey;
 }
 
@@ -47,7 +47,7 @@
     color: rgb(75, 75, 75);
 }
 
-.post-center-add {
+.add-center {
     display: flex;
     width: 90%;
     height: auto;
@@ -55,25 +55,25 @@
     justify-content: center;
 }
 
-.post-desc-add {
+.add-desc {
     flex:1;
     justify-self: center;
     padding: 30px;
 }
 
-.post-desc-title {
+.add-desc-title {
     font-size: 16px;
     font-weight: 700;
 }
 
-.post-desc-details {
+.add-desc-details {
     font-size: 16px;
     font-weight: 300;
     padding: 20px 0;
 }
 
 
-.post-image {
+.add-image {
     flex:1;
     width: 80%;
     height: auto;
@@ -82,35 +82,35 @@
 
 }
 
-.post-bottom {
+.add-bottom {
     display: flex;
     padding: 0;
     align-items: center;
     justify-content: space-between;
 }
 
-.post-bottom-left {
+.add-bottom-left {
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
 
-.post-like-icon-before {
+.add-save-icon-before {
     color: rgb(255, 93, 93);
     padding: 10px;
     cursor: pointer;
 }
-.post-like-icon-after {
+.add-save-icon-after {
     color: rgb(20, 195, 142);
     padding: 10px;
     cursor: pointer;
 }
 
-.post-like {
+.add-save {
     font-size: 18px;
 }
 
-.post-comment {
+.add-comment {
     margin-right: 80px;
 }
 

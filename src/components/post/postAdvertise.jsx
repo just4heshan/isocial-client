@@ -7,13 +7,13 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 
-const PostAdvertise = ({ post }) => {
-  const [like, setLike] = useState(post.like);
-  const [isLiked, setIsLiked] = useState(false);
+const PostAdvertise = ({ add }) => {
+  const [save, setSave] = useState(add.like);
+  const [isSaved, setIsSaved] = useState(false);
 
-  const handleLike = (e) => {
-    setLike(isLiked ? like - 1 : like + 1);
-    setIsLiked(!isLiked)
+  const handleSave = (e) => {
+    setSave(isSaved ? save - 1 : save + 1);
+    setIsSaved((prevSaved) => !prevSaved)
   };
 
 //   const postOptionsHandler = (e, props) => {
@@ -22,58 +22,61 @@ const PostAdvertise = ({ post }) => {
 //       );
 //   }
   return (
-    <div className="post">
-      <div className="post-wrapper">
-        <div className="post-top">
-          <div className="post-top-left">
+    <div className="add">
+      <div className="add-wrapper">
+        <div className="add-top">
+          <div className="add-top-left">
             <img
               src={
-                Users.filter((user) => user.id === post.userId)[0]
+                Users.filter((user) => user.id === add.userId)[0]
                   .profilePicture
               }
               alt="User Image"
-              className="post-profile-image"
+              className="add-profile-image"
             />
-            <span className="post-user-name">
-              {Users.filter((user) => user.id === post.userId)[0].username}
+            <span className="add-user-name">
+              {Users.filter((user) => user.id === add.userId)[0].username}
             </span>
-            <span className="post-date">{post.date}</span>
+            <span className="add-date">{add.date}</span>
           </div>
-          <div className="post-top-right">
+          <div>
             <MoreVertIcon className="vert-icon" />
           </div>
         </div>
-        <div className="post-center-add">
-          <img src={post.photo} alt="Post Image" className="post-image" />
-          <div className="post-desc-add">
-          <span className="post-desc-title">{post?.desc}</span>
-          <p className="post-desc-details">Post Details</p>
+        <div className="add-center">
+          <img src={add.photo} alt="Advertised Image" className="add-image" />
+          <div className="add-desc">
+          <span className="add-desc-title">{add?.desc}</span>
+          <p className="add-desc-details">
+          People connect on Facebook and Instagram every day. Your small business ads can show up as people are exploring what they’re interested in, so making a connection with your business is easy. 
+
+          </p>
           </div>
         </div>
-        <div className="post-bottom">
-          <div className="post-bottom-left">
-            {!isLiked && (
+        <div className="add-bottom">
+          <div className="add-bottom-left">
+            {!isSaved && (
               <BookmarkAddIcon
-                className="post-like-icon-before"
+                className="add-save-icon-before"
                 fontSize="large"
-                onClick={handleLike}
+                onClick={handleSave}
               />
             )}
-            {isLiked && (
+            {isSaved && (
               <BookmarkAddedIcon
-                className="post-like-icon-after"
+                className="add-save-icon-after"
                 fontSize="large"
-                onClick={handleLike}
+                onClick={handleSave}
               />
             )}
 
-            <span className="post-like">
-              <span>{like}</span> {like === 0 || 1 ? "People saved" : ""}
+            <span className="add-save">
+              <span>{save}</span> {save === 0 || 1 ? "People saved" : ""}
             </span>
           </div>
-          <div className="post-bottom-right">
-            <span className="post-comment">
-              <span>{post.comment}</span> Comments
+          <div>
+            <span className="add-comment">
+              <span>{add.comment}</span> Comments
             </span>
           </div>
         </div>
