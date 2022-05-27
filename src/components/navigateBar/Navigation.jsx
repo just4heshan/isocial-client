@@ -28,7 +28,7 @@ const Navigation = ({ setAuthToken }) => {
           <Link className="menu-item" to={'/advertisement'}><li>ADVERTISEMENT</li></Link>
           <Link className="menu-item" to={'/stories'}><li>ALL STATUS</li></Link>
           <hr className="hr-menu"/>
-          <li className="menu-item">MY FEED</li>
+          <li className="menu-item">MY FEEDS</li>
           <li className="menu-item">MY MARKETS</li>
           <li className="menu-item">BOOKMARKS</li>
           <li className="menu-item">EVENTS</li>
