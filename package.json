@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://socialawarenessapi.herokuapp.com/api",
-  "homepage": "https://just4heshan.github.io/isocial",
+  "homepage": "https://just4heshan.github.io/isocial-frontend",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
