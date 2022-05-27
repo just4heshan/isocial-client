@@ -15,7 +15,7 @@ const AdvertisementSidebar = ({ users }) => {
         <ul className="sidebar-list">
           <li className="sidebar-item">
             <FeedIcon className="sidebar-icon" />
-            <span className="sidebar-item-text">Feed</span>
+            <span className="sidebar-item-text">My Markets</span>
           </li>
 
           <li className="sidebar-item">

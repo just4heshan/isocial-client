@@ -12,7 +12,30 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 const Navigation = ({ setAuthToken }) => {
   const user = null;
 
+  let menu;
+
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
   const [isLogOut, setIsLogOut] = useState(false);
+
+  if (isShowMenu) {
+    menu = 
+    <div className="menu-items">
+      <div className="menu-items-wrapper">
+        <ui className="menu-item-list">
+          <Link className="menu-item" to={'/'}><li>HOME</li></Link>
+          <Link className="menu-item" to={'/campaign'}><li>CAMPAIGN</li></Link>
+          <Link className="menu-item" to={'/advertisement'}><li>ADVERTISEMENT</li></Link>
+          <Link className="menu-item" to={'/stories'}><li>ALL STATUS</li></Link>
+          <hr className="hr-menu"/>
+          <li className="menu-item">MY FEED</li>
+          <li className="menu-item">MY MARKETS</li>
+          <li className="menu-item">BOOKMARKS</li>
+          <li className="menu-item">EVENTS</li>
+        </ui>
+      </div>
+    </div>;
+  }
 
   const logOutHandler = (e) => {
     {
@@ -71,11 +94,18 @@ const Navigation = ({ setAuthToken }) => {
               <PersonIcon className="user-icon" onClick={logOutHandler} />
             </Link>
           )}
-          <a href="#" id="mobile-menu-btn" class="header__toggle hide-for-desktop">
-            <span className="span-bar"></span>
-            <span className="span-bar"></span>
-            <span className="span-bar"></span>
+          <a
+            href="#"
+            class="menu-toggle"
+            onClick={() => setIsShowMenu(!isShowMenu)}
+          >
+            <div className="hamburger-menu">
+              <span className="span-bar"></span>
+              <span className="span-bar"></span>
+              <span className="span-bar"></span>
+            </div>
           </a>
+          {menu}
         </div>
       </div>
     </div>

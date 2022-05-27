@@ -1,5 +1,5 @@
 .sidebar {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(208, 208, 208);
     position: relative;
     width: 100%;
     /* min-width: 20vw; */
@@ -51,6 +51,7 @@
     font-weight: 200;
     justify-self: center;
     letter-spacing: 1px;
+    background-color: rgb(19, 166, 115, 0.7);
 }
 
 .friend-list-heading {
@@ -99,4 +100,9 @@
 
 .sidebar-item-text:hover {
     color: rgb(16, 133, 92);
+}
+
+.sidebar-btn:hover {
+    background-color: rgb(19, 166, 115, 0.9);
+    transition: all 600ms ease-in-out;
 }

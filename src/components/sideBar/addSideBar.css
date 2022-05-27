@@ -40,12 +40,14 @@
 
 .sidebar-btn {
     width: 150px;
+    color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
-    font-weight: 200;
+    font-weight: 300;
     justify-self: center;
     letter-spacing: 1px;
+    background-color: rgb(19, 166, 115, 0.7);
 }
 
 .friend-list-heading {

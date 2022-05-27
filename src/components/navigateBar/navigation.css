@@ -8,6 +8,8 @@
     color: rgb(101, 101, 101);
     position: fixed;
     z-index: 10;
+    width: 100%;
+    position: relative;
  }
 
 .navigateWrapper {
@@ -57,19 +59,6 @@
     padding-bottom: 26px;
 }
 
-/* .menu li::before {
-    background-color: rgb(18, 66, 50);
-    height: 2px;
-    width: 10px;
-
-} */
-
-/* .menu-list:before {
-    background-color: blue;
-    width: 10px;
-    height: 3px;
-} */
-
 .menu-list :hover {
     opacity: 100%;
     border-bottom: 5px solid rgb(19, 166, 115);
@@ -111,6 +100,60 @@
     display: none;
 }
 
+.menu-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-image: linear-gradient(135deg,rgb(255, 93, 93, 0.8) 3%,rgb(16, 133, 92, 0.6));
+}
+
+.menu-items-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu-item-list {
+    list-style: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.menu-item {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hr-menu {
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 0;
+    margin: 10px 0;
+    border: none;
+    opacity: 0.7;
+}
+
 @media only screen and (max-width: 750px) {
     .logo {
         margin: 10px auto 0 auto;
@@ -131,7 +174,7 @@
 
 }
 
-@media only screen and (max-width: 1075px) {
+@media only screen and (max-width: 1081px) {
     .menu {
         display: none;
     }
@@ -139,8 +182,76 @@
     .span-bar {
         display: block;
     }
-
-
-
     
+    .hamburger-menu {
+        position: fixed;
+        top: 44px;
+        left: 750px;
+    }
+
+    .user-icon {
+        position: fixed;
+        top: 35px;
+        left: 700px;
+    }  
+
+    .menu-items {
+        width: 52%;
+    }
+}
+
+@media only screen and (max-width: 429px) {
+    .menu {
+        display: none;
+    }
+
+    .span-bar {
+        display: block;
+    }
+    
+    .hamburger-menu {
+        position: fixed;
+        top: 28px;
+        left: 390px;
+    }
+
+    .user-icon {
+        position: fixed;
+        top: 20px;
+        left: 340px;
+    }  
+
+    .menu-items {
+        width: 41%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .menu {
+        display: none;
+    }
+
+    .span-bar {
+        display: block;
+    }
+    
+    .hamburger-menu {
+        position: fixed;
+        top: 22px;
+        left: 320px;
+    }
+
+    .user-icon {
+        position: fixed;
+        top: 15px;
+        left: 270px;
+    }  
+
+    .menu-items {
+        width:35%;
+    }
+
+    .menu-item-list {
+        top: 180px;
+    }
 }
