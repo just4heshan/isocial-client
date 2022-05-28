@@ -48,6 +48,7 @@
     justify-self: center;
     letter-spacing: 1px;
     background-color: rgb(19, 166, 115, 0.7);
+    transition: all 600ms ease-in-out;
 }
 
 .friend-list-heading {

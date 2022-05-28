@@ -3,6 +3,7 @@
     align-items: center;
     margin-bottom: 15px;
     cursor: pointer;
+    transition: all 500ms ease-in-out;
 }
 
 .follower-image {
@@ -16,4 +17,5 @@
 .follower-card:hover {
     background-color: rgb(215, 215, 215);
     border-radius: 30px;
+    transition: all 500ms ease-in-out;
 }

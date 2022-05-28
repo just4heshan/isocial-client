@@ -41,13 +41,15 @@ const Navigation = ({ setAuthToken }) => {
     {
       isLogOut &&
         // e.preventDefault()
-        setIsLogOut((prevIsLogOut) => !prevIsLogOut);
+        setIsLogOut(true);
     }
   };
 
   useEffect(() => {
     return () => {
-      setAuthToken((prevAuthToken) => !prevAuthToken);
+      (isLogOut)&&(
+        setAuthToken(true)
+      )
       // console.log(setAuthToken)
     };
   }, [isLogOut]);
@@ -97,7 +99,7 @@ const Navigation = ({ setAuthToken }) => {
           <a
             href="#"
             class="menu-toggle"
-            onClick={() => setIsShowMenu(!isShowMenu)}
+            onClick={() => setIsShowMenu((prevIsShowMenu)=>!prevIsShowMenu)}
           >
             <div className="hamburger-menu">
               <span className="span-bar"></span>
