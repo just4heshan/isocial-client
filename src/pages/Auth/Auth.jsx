@@ -38,7 +38,7 @@ const Auth = ({ setAuthToken }) => {
   const [passwordError, setPasswordError] = useState(false);
 
   // const [showPassword, setShowPassword] = useState(true);
-  useEffect((setAuthToken) => {
+  useEffect(() => {
     return () => {
       setAuthToken((prevAuthToken) => !prevAuthToken);
     };
@@ -191,14 +191,14 @@ const Auth = ({ setAuthToken }) => {
                   )}
                   {isSignUp ? (
                     <div className="login-help">
-                      <a href="#" onClick={switchHandler}>
+                      <a onClick={switchHandler}>
                         Already have an account? Sign In
                       </a>
                     </div>
                   ) : (
                     <div className="login-help">
                       <a href="#">Forgotton Password?</a>
-                      <a href="#" onClick={switchHandler}>
+                      <a onClick={switchHandler}>
                         Don't have an account? Sign Up
                       </a>
                     </div>

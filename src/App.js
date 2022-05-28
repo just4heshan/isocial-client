@@ -41,11 +41,11 @@ const App = () => {
           <img className="backgroundImage" src={Image} alt="eclipse" />
           <Navigation setAuthToken={setAuthToken} />
           <Routes>
-            <Route path="/" element={<Home />} exact />
-            <Route path="/campaign" element={<Campaign />} />
-            <Route path="/advertisement" element={<Advertisement />} />
-            <Route path="/stories" element={<Stories />} />
-            <Route path="/auth" element={<Auth />} />
+            <Route exact path="/" element={<Home />}  />
+            <Route exact path="/campaign" element={<Campaign />} />
+            <Route exact path="/advertisement" element={<Advertisement />} />
+            <Route exact path="/stories" element={<Stories />} />
+            <Route exact path="/auth" element={<Auth />} />
           </Routes>
         </div>
       )}

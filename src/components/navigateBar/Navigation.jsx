@@ -7,7 +7,6 @@ import { Users } from "../../dummyData";
 import PersonIcon from "@mui/icons-material/Person";
 import Logo from "../../assets/logo.svg";
 import { Avatar } from "@mui/material";
-import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 
 const Navigation = ({ setAuthToken }) => {
   const user = null;
@@ -23,12 +22,12 @@ const Navigation = ({ setAuthToken }) => {
     <div className="menu-items">
       <div className="menu-items-wrapper">
         <ui className="menu-item-list">
-          <Link className="menu-item" to={'/'}><li>HOME</li></Link>
+          <Link className="menu-item" to={'/'}><li>TIMELINE</li></Link>
           <Link className="menu-item" to={'/campaign'}><li>CAMPAIGN</li></Link>
           <Link className="menu-item" to={'/advertisement'}><li>ADVERTISEMENT</li></Link>
-          <Link className="menu-item" to={'/stories'}><li>ALL STATUS</li></Link>
+          <Link className="menu-item" to={'/stories'}><li>STORIES</li></Link>
           <hr className="hr-menu"/>
-          <li className="menu-item">MY FEEDS</li>
+          <li className="menu-item">MY FEEDSS</li>
           <li className="menu-item">MY MARKETS</li>
           <li className="menu-item">BOOKMARKS</li>
           <li className="menu-item">EVENTS</li>
@@ -64,22 +63,22 @@ const Navigation = ({ setAuthToken }) => {
           <ul>
             <li className="menu-list">
               <Link className="menu-list-link" to="/">
-                Home
+                TIMELINE
               </Link>
             </li>
             <li className="menu-list">
               <Link className="menu-list-link" to="/campaign">
-                Campaign
+                CAMPAIGN
               </Link>
             </li>
             <li className="menu-list">
               <Link className="menu-list-link" to="/advertisement">
-                Advertiesment
+                ADVERTISEMENT
               </Link>
             </li>
             <li className="menu-list">
               <Link className="menu-list-link" to="/stories">
-                All Stories
+                STORIES
               </Link>
             </li>
           </ul>
@@ -97,7 +96,6 @@ const Navigation = ({ setAuthToken }) => {
             </Link>
           )}
           <a
-            href="#"
             class="menu-toggle"
             onClick={() => setIsShowMenu((prevIsShowMenu)=>!prevIsShowMenu)}
           >

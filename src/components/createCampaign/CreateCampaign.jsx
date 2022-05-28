@@ -18,7 +18,8 @@ const CreateCampaign = (e) => {
     const sumbitHandler =(e) => {
         e.preventDefault()
         dispatch(createCampaign(postData))
-        console.log(postData)
+        setPostData()
+        console.log(postData);
     }
 
   return (

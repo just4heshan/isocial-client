@@ -49,6 +49,16 @@ export const Users = [
     profilePicture: "https://images.news.iu.edu/dams/jjnnjbjznj_w768.jpg",
     username: "Mary Jane",
   },
+  {
+    id:11,
+    profilePicture: "https://ca-times.brightspotcdn.com/dims4/default/0ea7d59/2147483647/strip/true/crop/3000x4496+0+0/resize/840x1259!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc9%2F8a%2F50e7258f436ab00dad0e61cb7327%2Fheadshot-destano-credit-amy-vitale.jpg",
+    username: "Gary Duty",
+  },
+  {
+    id:12,
+    profilePicture: "https://images.news.iu.edu/dams/jjnnjbjznj_w768.jpg",
+    username: "Mary Jane",
+  },
 ];
 
 export const Posts = [
@@ -133,6 +143,23 @@ export const Posts = [
     photo: "https://www.healthwatchwakefield.co.uk/wp-content/uploads/2022/03/self-injury-day.png",
     date: "1 week ago",
     userId: 10,
+    like: 104,
+    comment: 12,
+  },
+  {
+    id:11,
+    desc: "Change the world by being yourself.",
+    photo: "https://www.quotemaster.org/images/3a/3ab4599220686e7ea9e99a689909d074.jpg",
+    date: "5 days ago",
+    userId:11,
+    like: 11,
+    comment: 2,
+  },
+  {
+    id: 12,
+    photo: "https://www.healthwatchwakefield.co.uk/wp-content/uploads/2022/03/self-injury-day.png",
+    date: "1 week ago",
+    userId: 12,
     like: 104,
     comment: 12,
   },

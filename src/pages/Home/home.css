@@ -1,12 +1,151 @@
 .home{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10vh;
 }
 
-.home-top-heading {
-    font-size: 10px;
-    /* color: black; */
+.home-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
 
+}
+
+.home-top {
+    background-color: rgb(43, 45, 45, 0.3);
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 30px;
+    z-index: 2;
+
+}
+
+.cover-photo {
+    width: 91.5%;
+    height: 35vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.home.bottom {
+    width: 100%;
+    height: 65vh;
+    margin: 0;
+    padding: 0;
+}
+
+.home-bottom-wrapper {
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+}
+
+.bottom-left {
+    flex: 1;
+    background-color: rgb(230, 230, 230);
+    height: 65vh;
+}
+
+.bottom-left-wrapper {
+    padding: 20px;
+}
+
+.details-title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.details-list {
+    list-style: none;
+    font-size: 18px;
+}
+
+.list-item {
+    letter-spacing: 2px;
+    padding: 10px 0 10px 20px;
+}
+
+.edit-details-btn {
+    border: none;
+    background-color: rgb(20, 195, 142);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: all 300ms ease-in-out;
+}
+
+.edit-details-btn:hover {
+    background-color: rgb(20, 195, 142, 0.6);
+    transition: all 300ms ease-in-out;
+}
+
+.bottom-center {
+    flex: 1;
+    background-color: rgba(238, 238, 238, 0.8);
+    height: 65vh;
+    overflow-y: scroll;
+}
+
+.bottom-center-wrapper {
+    padding: 20px;
+}
+
+.follower-title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.bottom-right {
+    flex: 1;
+    background-color: rgb(253, 253, 253, 0.5);
+    height: 65vh;
+    overflow-y: scroll;
+}
+
+.bottom-right-wrapper {
+    padding: 20px;
+}
+
+.market-title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }

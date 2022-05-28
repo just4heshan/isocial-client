@@ -71,7 +71,7 @@ const PostAdvertise = ({ add }) => {
             )}
 
             <span className="add-save">
-              <span>{save}</span> {save === 0 || 1 ? "People saved" : ""}
+              <span>{save}</span> {save === 0 || 1 ? "People bookmarked" : ""}
             </span>
           </div>
           <div>
