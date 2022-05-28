@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/isocial-frontend/static/css/main.2790ff11.css",
-    "main.js": "/isocial-frontend/static/js/main.a16fe736.js",
+    "main.js": "/isocial-frontend/static/js/main.8075c768.js",
     "static/media/logo.svg": "/isocial-frontend/static/media/logo.5a7d8784f8354a4da723fd9457faaa12.svg",
     "static/media/bg-intro-desktop.svg": "/isocial-frontend/static/media/bg-intro-desktop.8be308fd4ce79bd32a09ec5437774701.svg",
     "index.html": "/isocial-frontend/index.html",
     "main.2790ff11.css.map": "/isocial-frontend/static/css/main.2790ff11.css.map",
-    "main.a16fe736.js.map": "/isocial-frontend/static/js/main.a16fe736.js.map"
+    "main.8075c768.js.map": "/isocial-frontend/static/js/main.8075c768.js.map"
   },
   "entrypoints": [
     "static/css/main.2790ff11.css",
-    "static/js/main.a16fe736.js"
+    "static/js/main.8075c768.js"
   ]
 }
