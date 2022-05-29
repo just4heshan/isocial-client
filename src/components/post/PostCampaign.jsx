@@ -24,7 +24,7 @@ const PostCampaign = ({ campaign }) => {
         <div className="post-top">
           <div className="post-top-left">
             <img
-              src={campaign.imageUrl}
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
               alt="User Image"
               className="post-profile-image"
             />

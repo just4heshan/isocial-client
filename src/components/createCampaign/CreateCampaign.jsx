@@ -24,13 +24,13 @@ const CreateCampaign = (e) => {
   const createNewCampaign = async () => {
     await addDoc(campaignsCollectionRef, {
       message: postData.message || "No Desc",
-      comment: "hello",
+      comment: "0",
       date: "",
       imageUrl: imageURL,
       isLiked: false,
       like: 0,
       userId: 2,
-      userName: "Mary Jane",
+      userName: "Saroj Malakkar",
     });
   };
 
@@ -81,23 +81,16 @@ const CreateCampaign = (e) => {
             <div className="share-options">
               <div className="share-option">
                 {/* <div className="input-image"><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>     */}
-                <input type="file" onChange={imageUploadHandler} />
+                <input className="input-file" type="file" onChange={imageUploadHandler} />
                 <AddAPhotoIcon fontSize="large" className="share-option-icon" />
                 <span className="share-option-text">Photo</span>
-              </div>
-              <div className="share-option">
-                <TagIcon
-                  fontSize="large"
-                  className="share-option-icon tag-icon-color"
-                />
-                <span className="share-option-text">Tag</span>
               </div>
               <div className="share-option">
                 <MoodIcon
                   fontSize="large"
                   className="share-option-icon feeling-icon-color"
                 />
-                <span onClick={uploadImage} className="share-option-text">Feeling</span>
+                <span onClick={uploadImage} className="share-option-text">Upload Image</span>
               </div>
               <div className="share-option">
                 <PushPinIcon

@@ -60,7 +60,7 @@ const CreateAdd = () => {
         <hr className="add-post-hr"/>
         <div className="add-options">
             <div className="add-option">
-              <div className="input-image"><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>    
+              <div className="input-image-add"><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>    
               <AddAPhotoIcon fontSize="large" className="add-option-icon" />
               <span className="add-option-text">Photo</span>
             </div>

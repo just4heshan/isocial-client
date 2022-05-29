@@ -1,0 +1,26 @@
+.stories {
+    width: 80%;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    justify-content: center;
+
+}
+
+.stories-wrapper {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+
+}
+
+img {
+    position: relative;
+    width: 80%;
+}
+
+img:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}

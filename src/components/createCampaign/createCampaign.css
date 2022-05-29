@@ -73,6 +73,7 @@
     cursor: pointer;
     transition: all 300ms;
     padding: 10px 10px;
+    position: relative;
     /* position: absolute; */
     /* top: 10px */
 }
@@ -129,10 +130,12 @@
     border-radius: 10px;
 }
 
-.input-image {
-    width: 30px;
+.input-file {
+    width: 90px;
     z-index: 30;
     opacity: 0;
+    position: absolute;
+    height: 50px;
 }
 
 

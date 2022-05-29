@@ -103,6 +103,7 @@
     cursor: pointer;
     transition: all 300ms;
     padding: 10px 10px;
+    position: relative;
 }
 
 .add-option-icon {
@@ -164,6 +165,13 @@
     color: rgb(165, 164, 164);
 }
 
+.input-image-add {
+    opacity: 0;
+    position: absolute;
+    /* height: 100px;
+    width: 100px; */
+    z-index: 20;
+}
 
 
 
