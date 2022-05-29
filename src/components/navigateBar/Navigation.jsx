@@ -22,7 +22,7 @@ const Navigation = ({ setAuthToken }) => {
     <div className="menu-items">
       <div className="menu-items-wrapper">
         <ui className="menu-item-list">
-          <Link className="menu-item" to={'/'}><li>TIMELINE</li></Link>
+          <Link className="menu-item" to={'/home'}><li>TIMELINE</li></Link>
           <Link className="menu-item" to={'/campaign'}><li>CAMPAIGN</li></Link>
           <Link className="menu-item" to={'/advertisement'}><li>ADVERTISEMENT</li></Link>
           <Link className="menu-item" to={'/stories'}><li>STORIES</li></Link>
@@ -62,7 +62,7 @@ const Navigation = ({ setAuthToken }) => {
         <div className="menu">
           <ul>
             <li className="menu-list">
-              <Link className="menu-list-link" to="/">
+              <Link className="menu-list-link" to="/home">
                 TIMELINE
               </Link>
             </li>
@@ -91,7 +91,7 @@ const Navigation = ({ setAuthToken }) => {
               src={Users.photo[0]}
             ></Avatar>
           ) : (
-            <Link to={"/auth"}>
+            <Link to={"/"}>
               <PersonIcon className="user-icon" onClick={logOutHandler} />
             </Link>
           )}

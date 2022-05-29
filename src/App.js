@@ -11,45 +11,35 @@ import Advertisement from "./pages/Advertisement/Advertisement";
 import Navigation from "./components/navigateBar/Navigation";
 import Home from "./pages/Home/Home";
 import Stories from "./pages/Stories/Stories";
-import { getCampaign } from "./actions/campaigns";
-
-
+// import { getCampaign } from "./actions/campaigns";
 
 const App = () => {
+  /** Redux-Dispatch a req */
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   return () => {
+  //     dispatch(getCampaign());
+  //   };
+  // }, [dispatch])
 
-  const dispatch = useDispatch();
+  const [authToken, setAuthToken] = useState(false);
 
-  useEffect(() => {
-    return () => {
-      dispatch(getCampaign());
-    };
-  }, [dispatch])
+  const authCheckHandler = () => {
+    setAuthToken(true);
+  };
 
-  const [authToken, setAuthToken] = useState(true)
   return (
     <BrowserRouter>
       <div>
-        <div >
-        {!authToken && (
-        <div>
-          <Navigation setAuthToken={setAuthToken}/>
-          <Auth setAuthToken={setAuthToken}/>
-        </div>
-      )}
-      {authToken && (
-        <div >
-          <img className="backgroundImage" src={Image} alt="eclipse" />
-          <Navigation setAuthToken={setAuthToken} />
-          <Routes>
-            <Route exact path="/" element={<Home />}  />
-            <Route exact path="/campaign" element={<Campaign />} />
-            <Route exact path="/advertisement" element={<Advertisement />} />
-            <Route exact path="/stories" element={<Stories />} />
-            <Route exact path="/auth" element={<Auth />} />
-          </Routes>
-        </div>
-      )}
-        </div>
+        <img className="backgroundImage" src={Image} alt="eclipse" />
+        <Navigation setAuthToken={setAuthToken} />
+        <Routes>
+          <Route exact path="/" element={<Auth />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/campaign" element={<Campaign />} />
+          <Route exact path="/advertisement" element={<Advertisement />} />
+          <Route exact path="/stories" element={<Stories />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

@@ -1,80 +1,50 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
 
 import "./auth.css";
 import Image from "../../assets/bg-intro-desktop.svg";
-import Navigation from "../../components/navigateBar/Navigation";
-import customTextField from "./customTextField";
 
 import { TextField, Button, InputAdornment, Divider } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const initialState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
-  phoneNumber: "",
-  homeTown: "",
-};
-
-const Auth = ({ setAuthToken }) => {
+const Auth = ({ authCheckHandler }) => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [isLogIn, setIsLogIn] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phoneNumber: "",
+    homeTown: "",
+  });
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [homeTown, setHomeTown] = useState("");
-  const [formData, setFormData] = useState(initialState);
+  // useEffect(() => {
+  //   return () => {
+  //     authCheckHandler();
+  //     console.log("Logged");
+  //   };
+  // }, [isLogIn]);
 
-  const [userNameError, setUserNameError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
+  const campaignsCollectionRef = collection(db, "users");
 
-  // const [showPassword, setShowPassword] = useState(true);
-  useEffect(() => {
-    return () => {
-      setAuthToken((prevAuthToken) => !prevAuthToken);
-    };
-  }, [isLogIn]);
-
-  const changeHandler = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const createNewCampaign = async (e) => {
+    await addDoc(campaignsCollectionRef, {
+    firstName: formData.firstName || 'none',
+    lastName: formData.lastName || 'none',
+    email: formData.email || 'none',
+    password: formData.password || 'none',
+    phoneNumber: formData.phoneNumber || 'none',
+    homeTown: formData.homeTown || 'none',
+    });
+    // setIsLogIn((prevIsLogin) => !prevIsLogin);
   };
 
   const switchHandler = (e) => {
     setIsSignUp((prevIsSignUp) => !prevIsSignUp);
-  };
-
-  const submitHandler = (e) => {
-    e.preventDefault()
-    setIsLogIn((prevIsLogIn) => !prevIsLogIn);
-    console.log(formData)
-  };
-
-  const errorHandler = (e) => {
-    e.preventDefault();
-
-    setUserNameError(false);
-    setPasswordError(false);
-
-    if (email === "") {
-      setUserNameError(true);
-    }
-
-    if (password === "") {
-      setPasswordError(true);
-    }
-
-    if (email && password) {
-      console.log(email, password);
-    }
   };
 
   const textFieldStyle = {
@@ -85,8 +55,8 @@ const Auth = ({ setAuthToken }) => {
     marginTop: 20,
   };
 
-  const showPasswordHandler = () => {
-    // setShowPassword((prevShowPassword) => !prevShowPassword);
+  const fontStyle = {
+    fontWeight: 700,
   };
 
   return (
@@ -107,7 +77,7 @@ const Auth = ({ setAuthToken }) => {
                 <p style={{ fontSize: 30, marginBottom: 20 }}>
                   {isSignUp ? "Sign Up" : "Sign In"}
                 </p>
-                <form onSubmit={submitHandler}>
+                <form>
                   {isSignUp && (
                     <>
                       <TextField
@@ -115,19 +85,23 @@ const Auth = ({ setAuthToken }) => {
                         label="First Name"
                         color="primary"
                         type="text"
-                        onChange={changeHandler}
                         fullWidth
                         required
                         style={textFieldStyle}
+                        onChange={(e) =>
+                          setFormData({ ...formData, firstName: e.target.value })
+                        }
                       />
                       <TextField
                         name="lastName"
                         label="Last Name"
                         color="primary"
                         type="text"
-                        onChange={changeHandler}
                         fullWidth
                         style={textFieldStyle}
+                        onChange={(e) =>
+                          setFormData({ ...formData, lastName: e.target.value })
+                        }
                       />
                     </>
                   )}
@@ -136,21 +110,25 @@ const Auth = ({ setAuthToken }) => {
                     label="Email"
                     color="primary"
                     type="email"
-                    onChange={changeHandler}
                     fullWidth
                     required
                     style={textFieldStyle}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                   />
                   <TextField
                     name="password"
                     label="Password"
                     color="primary"
                     type="password"
-                    onChange={changeHandler}
                     fullWidth
                     minLength="6"
                     required
                     style={textFieldStyle}
+                    onChange={(e) =>
+                      setFormData({ ...formData, password: e.target.value })
+                    }
                     // InputProps={
                     //   <InputAdornment position="end">
                     //     <Visibility onClick={showPasswordHandler} />
@@ -164,57 +142,64 @@ const Auth = ({ setAuthToken }) => {
                         label="Confirm Password"
                         color="primary"
                         type="password"
-                        onChange={changeHandler}
                         fullWidth
                         required
                         style={textFieldStyle}
+                        onChange={(e) =>
+                          setFormData({ ...formData, confirmPassword: e.target.value })
+                        }
                       />
                       <TextField
                         name="phoneNumber"
                         label="Phone Number"
                         color="primary"
                         type="number"
-                        onChange={changeHandler}
                         fullWidth
                         style={textFieldStyle}
+                        onChange={(e) =>
+                          setFormData({ ...formData, phoneNumber: e.target.value })
+                        }
                       />
                       <TextField
-                        name="homeTwon"
+                        name="homeTown"
                         label="Home Town"
                         color="primary"
                         type="text"
-                        onChange={changeHandler}
                         fullWidth
                         style={textFieldStyle}
+                        onChange={(e) =>
+                          setFormData({ ...formData, homeTown: e.target.value })
+                        }
                       />
                     </>
                   )}
                   {isSignUp ? (
                     <div className="login-help">
                       <a onClick={switchHandler}>
-                        Already have an account? Sign In
+                        Already have an account?{" "}
+                        <span style={fontStyle}>Sign In</span>
                       </a>
                     </div>
                   ) : (
                     <div className="login-help">
                       <a href="#">Forgotton Password?</a>
                       <a onClick={switchHandler}>
-                        Don't have an account? Sign Up
+                        Don't have an account?{" "}
+                        <span style={fontStyle}>Sign Up</span>
                       </a>
                     </div>
                   )}
                   <Divider />
-                  <Link to={"/campaign"}>
-                    <Button
-                      color="primary"
-                      variant="contained"
-                      type="submit"
-                      style={buttonStyle}
-                      endIcon={<ArrowForwardIosIcon />}
-                    >
-                      {isSignUp ? "Sign Up" : "Sign In"}
-                    </Button>
-                  </Link>
+                  <Link to={'/campaign'}>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    style={buttonStyle}
+                    endIcon={<ArrowForwardIosIcon />}
+                    onClick={createNewCampaign}
+                  >
+                    {isSignUp ? "Sign Up" : "Sign In"}
+                  </Button></Link>
                 </form>
               </div>
             </div>
