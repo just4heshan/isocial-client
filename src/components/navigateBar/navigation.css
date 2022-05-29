@@ -27,8 +27,11 @@
     position: relative;
     margin-left: 150px;
     cursor: pointer;
+}
 
-
+.logo-img {
+    width: auto;
+    height: 36px;
 }
 
 .menu {

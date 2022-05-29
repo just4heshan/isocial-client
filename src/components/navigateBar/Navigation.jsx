@@ -57,7 +57,7 @@ const Navigation = ({ setAuthToken }) => {
     <div className="navigate">
       <div className="navigateWrapper">
         <div className="logo">
-          <img src={Logo} alt="logo" width={110} />
+          <img className="logo-img" src={Logo} alt="logo" width={110} />
         </div>
         <div className="menu">
           <ul>

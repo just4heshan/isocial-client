@@ -10,7 +10,7 @@ const Home = () => {
       <div className="home-wrapper">
         <div className="home-top">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
+            src="https://engineering.unl.edu/images/staff/Kayla-Person.jpg"
             alt="profile-photo"
             className="profile-photo"
           />
@@ -27,10 +27,10 @@ const Home = () => {
                 <span className="details-title">MY DETAILS</span>
                 <ui className="details-list">
                   <li className="list-item">
-                    <span className="user-name">Saroj Malakkar</span>
+                    <span className="user-name">Janell Shrum</span>
                   </li>
                   <li className="list-item">
-                    <span className="user-email">saroj@gmail.com</span>
+                    <span className="user-email">janel@gmail.com</span>
                   </li>
                   <li className="list-item">
                     <span className="user-hometown">Victoria, Melbourne</span>
